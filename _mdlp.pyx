@@ -129,7 +129,7 @@ cdef SIZE_t find_cut(np.ndarray[np.int64_t, ndim=1] y, int start, int end):
     cdef:
         int length = end - start
         float prev_entropy = np.inf #INFINITY
-        SIZE_t k = 0
+        SIZE_t k = -1
         int ind
         float first_half, second_half, curr_entropy
     for ind in range(start + 1, end):
